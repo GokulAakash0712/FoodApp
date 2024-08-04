@@ -1,0 +1,56 @@
+<div class="container mt-5">
+  <h2>Cart Page</h2>
+  <div class="row mt-5">
+    <app-not-found
+      [visible]="!cart || !cart.items.length"
+      notFoundMessage="No Items in Cart"
+      resetLinkText="Go To HomePage"
+    ></app-not-found>
+  </div>
+  <div class="row mt-4" *ngIf="cart && cart.items.length">
+    <div class="col-lg-7">
+      <div class="cart-container">
+        <div class="cart-container-row" *ngFor="let cartItem of cart.items">
+          <div class="image">
+            <img [src]="cartItem.food.imageUrl" />
+          </div>
+          <div class="name" routerLink="/food/{{ cartItem.food.id }}">
+            {{ cartItem.food.name }}
+          </div>
+          <div class="count">
+            <select
+              #quantitySelect
+              [value]="cartItem.quantity"
+              (change)="changeQuantity(cartItem, quantitySelect.value)"
+            >
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="price">{{ cartItem.price | currency : "INR" }}</div>
+          <div class="remove">
+            <i class="fa fa-trash" (click)="removeCartItem(cartItem)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 ms-auto">
+      <div
+        class="checkout ms-auto me-auto me-lg-0 me-xl-0 mt-4 mt-lg-0 mt-xl-0"
+      >
+        <div class="total-count">
+          Count: <b>{{ cart.totalCount }}</b>
+        </div>
+        <div class="total-price">
+          Price: <b>{{ cart.totalPrice | currency : "INR" }}</b>
+        </div>
+        <div class="button mt-3">
+          <button class="btn w-100">Proceed To Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

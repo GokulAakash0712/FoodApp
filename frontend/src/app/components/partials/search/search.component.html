@@ -1,0 +1,10 @@
+<div class="search mt-5">
+  <input
+    type="text"
+    placeholder="Search Food"
+    #s
+    (keyup.enter)="search(s.value)"
+    [value]="searchTerm"
+  />
+  <button (click)="search(s.value)">Search</button>
+</div>

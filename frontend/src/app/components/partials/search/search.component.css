@@ -1,0 +1,31 @@
+.search {
+  width: 400px;
+  margin: auto;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid lightgray;
+  padding-left: 10px;
+  border-radius: 7px;
+  outline: none;
+}
+
+button {
+  position: absolute;
+  height: 40px;
+  border-radius: 0 7px 7px 0;
+  outline: none;
+  border: none;
+  right: 0;
+  background-color: #ff2727;
+  color: white;
+}
+
+@media screen and (max-width: 376px) {
+  .search {
+    width: 300px;
+  }
+}

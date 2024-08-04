@@ -1,0 +1,81 @@
+.container {
+  margin-top: 100px;
+}
+
+.image {
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  border: 1px solid;
+  border-radius: 7px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.favourite.not .fa-heart {
+  color: gray;
+}
+
+.star {
+  color: orange;
+}
+
+.origins {
+  display: flex;
+  gap: 10px;
+}
+
+.origins .origin {
+  background-color: lightgray;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tags .tag {
+  background-color: lightgray;
+  color: blue;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.btn {
+  background-color: #ff2727;
+  color: white;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #ff2727;
+  border: 1px solid #ff2727;
+}
+
+.content {
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    margin-top: 30px;
+  }
+}

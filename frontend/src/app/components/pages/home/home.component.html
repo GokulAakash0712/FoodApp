@@ -1,0 +1,44 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<div class="mt-5">
+  <app-not-found
+    [visible]="!foods || !foods.length"
+    resetLinkText="Reset Search"
+  ></app-not-found>
+</div>
+<div class="container mt-5 mb-5">
+  <div class="card-div" *ngFor="let food of foods">
+    <a routerLink="/food/{{ food.id }}">
+      <div class="food-card">
+        <div class="image">
+          <img [src]="food.imageUrl" [alt]="food.name" />
+        </div>
+        <div class="content mt-3">
+          <div class="name">
+            <p>{{ food.name }}</p>
+            <p class="favorite {{ food.favorite ? '' : 'not' }}">
+              <i class="fa fa-heart"></i>
+            </p>
+          </div>
+          <div class="star">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <div class="time">
+            <div class="origin">
+              <p *ngFor="let origin of food.origins">{{ origin }}</p>
+            </div>
+            <div class="cooktime">
+              <p><i class="fa fa-clock"></i></p>
+              <p>{{ food.cookTime }}</p>
+            </div>
+          </div>
+          <div class="price">{{ food.price | currency : "INR" }}</div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

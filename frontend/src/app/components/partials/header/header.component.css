@@ -1,0 +1,131 @@
+.navbar {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+  color: #ff2727;
+  background-color: black;
+}
+
+.logo a {
+  color: #ff2727;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo a span {
+  color: white;
+}
+
+.menu p {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  padding-top: 17px;
+  cursor: pointer;
+}
+
+.toggle {
+  color: #ff2727;
+  padding-top: 17px;
+  cursor: pointer;
+}
+
+.menu p a {
+  color: #ff2727;
+}
+
+.menu p a:hover {
+  color: white;
+}
+
+.menu-sm {
+  background-color: black;
+  width: 100%;
+  min-height: 100px;
+  position: absolute;
+  padding: 20px 0px 20px 50px;
+  z-index: 10;
+}
+
+.menu-sm p a {
+  color: #ff2727;
+  cursor: pointer;
+}
+
+.menu-sm p a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.profile-img {
+  padding-top: 14px;
+  cursor: pointer;
+  color: white;
+  position: relative;
+}
+
+.profile-div {
+  background-color: #fff;
+  color: black;
+  padding: 20px;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  display: none;
+  z-index: 10;
+}
+
+.profile-div p a:hover {
+  color: #ff2727;
+}
+
+.profile-img:hover .profile-div {
+  display: block;
+}
+
+.profile-img a:hover {
+  color: white;
+}
+
+.menu-div {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-sm a {
+  text-decoration: none;
+  color: black;
+}
+
+.profile-div a {
+  color: black;
+  text-decoration: none;
+}
+
+a {
+  color: #ff2727;
+  text-decoration: none;
+}
+
+.cart span {
+  width: 20px;
+  height: 20px;
+  background-color: #ff2727;
+  padding: 3px 7px;
+  color: white;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
