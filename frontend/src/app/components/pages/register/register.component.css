@@ -1,0 +1,41 @@
+.error {
+  color: red;
+}
+
+.form {
+  height: 500px;
+  overflow-y: scroll;
+  width: 400px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  text-align: center;
+}
+
+.btn {
+  background-color: #ff2727;
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #ff2727;
+  border: 1px solid #ff2727;
+}
+
+input:focus {
+  box-shadow: none;
+}
+
+textarea:focus {
+  box-shadow: none;
+}
+
+.new p a {
+  text-decoration: underline;
+}

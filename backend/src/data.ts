@@ -1,0 +1,83 @@
+export const sample_foods: any[] = [
+  {
+    id: "1",
+    name: "Chicken Burger",
+    price: 120,
+    cookTime: "40-50",
+    favorite: false,
+    origins: ["India"],
+    stars: 4.0,
+    imageUrl: "assets/chickenburger.jpg",
+    tags: ["FastFood", "Burger", "Chicken"],
+  },
+  {
+    id: "2",
+    name: "Chicken Sandwidch",
+    price: 150,
+    cookTime: "40-50",
+    favorite: true,
+    origins: ["India"],
+    stars: 4.2,
+    imageUrl: "assets/chickensandwich.jpg",
+    tags: ["FastFood", "Sandwidch", "Chicken"],
+  },
+  {
+    id: "3",
+    name: "Pizza",
+    price: 100,
+    cookTime: "40-50",
+    favorite: false,
+    origins: ["India"],
+    stars: 3.5,
+    imageUrl: "assets/pizza.jpg",
+    tags: ["FastFood", "Pizza"],
+  },
+  {
+    id: "4",
+    name: "Chicken Shawarma",
+    price: 120,
+    cookTime: "40-50",
+    favorite: true,
+    origins: ["India"],
+    stars: 4.5,
+    imageUrl: "assets/chickenshawarma.jpg",
+    tags: ["FastFood", "Shawarma", "Chicken"],
+  },
+  {
+    id: "5",
+    name: "BBQ Shawarma",
+    price: 150,
+    cookTime: "40-50",
+    favorite: true,
+    origins: ["India"],
+    stars: 4.5,
+    imageUrl: "assets/bbqshawarma.jpg",
+    tags: ["FastFood", "Shawarma", "BBQ"],
+  },
+];
+
+export const sample_tags: any[] = [
+  { name: "All", count: 6 },
+  { name: "Pizza", count: 1 },
+  { name: "Burger", count: 1 },
+  { name: "Sandwidch", count: 1 },
+  { name: "Shawarma", count: 2 },
+  { name: "FastFood", count: 1 },
+];
+
+export const sample_users: any[] = [
+  {
+    name: "Aakash",
+    email: "aakash@gmail.com",
+    password: "Aakash@0712",
+    address: "Salem",
+    isAdmin: true,
+  },
+  {
+    name: "Gokul",
+    email: "gokul@gmail.com",
+    password: "Gokul@0712",
+    address: "Salem",
+    isAdmin: false,
+  },
+];

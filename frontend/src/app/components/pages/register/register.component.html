@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="form mt-5">
+    <h2 class="mb-3">Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+      <div class="form-input mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" formControlName="name" />
+        <div class="error" *ngIf="fc['name'].errors && isSubmitted">
+          <div *ngIf="fc['name'].errors['required']">Name is required.</div>
+          <div *ngIf="fc['name'].errors['minlength']">
+            Must contains Atleast 3 Characters.
+          </div>
+        </div>
+      </div>
+      <div class="form-input mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" formControlName="email" />
+        <div class="error" *ngIf="fc['email'].errors && isSubmitted">
+          <div *ngIf="fc['email'].errors['required']">Email is required.</div>
+          <div *ngIf="fc['email'].errors['email']">Invalid Email.</div>
+        </div>
+      </div>
+      <div class="form-input mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+        />
+        <div class="error" *ngIf="fc['password'].errors && isSubmitted">
+          <div *ngIf="fc['password'].errors['required']">
+            Password is required.
+          </div>
+          <div *ngIf="fc['password'].errors['minlength']">
+            Must contains Atleast 5 Characters.
+          </div>
+        </div>
+      </div>
+      <div class="form-input mb-3">
+        <label for="password" class="form-label">Confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="confirmPassword"
+        />
+        <div class="error" *ngIf="fc['confirmPassword'].errors && isSubmitted">
+          <div *ngIf="fc['confirmPassword'].errors['required']">
+            Confirm Password is required.
+          </div>
+          <div *ngIf="fc['confirmPassword'].errors['notMatch']">
+            Confirm Password Doesn't Match
+          </div>
+        </div>
+      </div>
+      <div class="form-input mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea
+          name="address"
+          id="address"
+          class="form-control"
+          formControlName="address"
+        ></textarea>
+        <div class="error" *ngIf="fc['address'].errors && isSubmitted">
+          <div *ngIf="fc['address'].errors['required']">
+            Address is required.
+          </div>
+          <div *ngIf="fc['address'].errors['minlength']">
+            Must contains Atleast 5 Characters
+          </div>
+        </div>
+      </div>
+      <div class="button mt-5">
+        <button type="submit" class="btn w-100">Register</button>
+      </div>
+    </form>
+    <div class="new mt-3">
+      <p>
+        Already a user?
+        <span
+          ><a routerLink="/login" [queryParams]="{ returnUrl: returnUrl }"
+            >Login Here</a
+          ></span
+        >
+      </p>
+    </div>
+  </div>
+</div>

@@ -10,7 +10,7 @@ export const sample_foods: Food[] = [
     favorite: false,
     origins: ['India'],
     stars: 4.0,
-    imageUrl: '',
+    imageUrl: 'assets/chickenburger.jpg',
     tags: ['FastFood', 'Burger', 'Chicken'],
   },
   {
@@ -21,7 +21,7 @@ export const sample_foods: Food[] = [
     favorite: true,
     origins: ['India'],
     stars: 4.2,
-    imageUrl: '',
+    imageUrl: 'assets/chickensandwich.jpg',
     tags: ['FastFood', 'Sandwidch', 'Chicken'],
   },
   {
@@ -32,7 +32,7 @@ export const sample_foods: Food[] = [
     favorite: false,
     origins: ['India'],
     stars: 3.5,
-    imageUrl: '',
+    imageUrl: 'assets/pizza.jpg',
     tags: ['FastFood', 'Pizza'],
   },
   {
@@ -43,7 +43,7 @@ export const sample_foods: Food[] = [
     favorite: true,
     origins: ['India'],
     stars: 4.5,
-    imageUrl: '',
+    imageUrl: 'assets/chickenshawarma.jpg',
     tags: ['FastFood', 'Shawarma', 'Chicken'],
   },
   {
@@ -54,7 +54,7 @@ export const sample_foods: Food[] = [
     favorite: true,
     origins: ['India'],
     stars: 4.5,
-    imageUrl: '',
+    imageUrl: 'assets/bbqshawarma.jpg',
     tags: ['FastFood', 'Shawarma', 'BBQ'],
   },
 ];

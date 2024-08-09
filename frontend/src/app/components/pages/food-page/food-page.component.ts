@@ -12,18 +12,20 @@ import { CartService } from '../../../services/cart.service';
 export class FoodPageComponent implements OnInit {
   food!: Food;
   constructor(
-    private activatedRoute: ActivatedRoute,
-    private foodService: FoodService,
+    activatedRoute: ActivatedRoute,
+    foodService: FoodService,
     private cartService: CartService,
     private router: Router
-  ) {}
-  ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
-      if (params['id']) {
-        this.food = this.foodService.getFoodById(params['id']);
-      }
+  ) {
+    activatedRoute.params.subscribe((params) => {
+      if (params['id'])
+        foodService.getFoodById(params['id']).subscribe((serverFood) => {
+          this.food = serverFood;
+        });
     });
   }
+
+  ngOnInit(): void {}
 
   addToCart() {
     this.cartService.addToCart(this.food);

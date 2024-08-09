@@ -51,6 +51,10 @@ export class CartService {
     return this.cartSubject.asObservable();
   }
 
+  getCart(): Cart {
+    return this.cartSubject.value; //always keeps the latest value
+  }
+
   private setCartToLocalStorage(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.cart.totalPrice = this.cart.items.reduce(

@@ -1,43 +1,23 @@
-.filter {
-  width: 500px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.btn:hover {
+.btn-hover {
   background-color: #ff2727;
   color: white;
 }
 
 .btn {
+  border: 1px solid #ff2727;
   background-color: white;
   color: #ff2727;
-  border: 1px solid #ff2727;
 }
 
-@media screen and (max-width: 426px) {
-  .filter {
-    width: 400px;
-    overflow-x: scroll;
-    margin: auto;
-  }
+.container {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  gap: 20px;
 }
 
-@media screen and (max-width: 376px) {
-  .filter {
-    width: 350px;
-    overflow-x: scroll;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 321px) {
-  .filter {
-    width: 300px;
-    overflow-x: scroll;
-    margin: auto;
+@media (min-width: 1024px) {
+  .container {
+    overflow-x: hidden;
   }
 }

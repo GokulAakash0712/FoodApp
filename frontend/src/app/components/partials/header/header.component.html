@@ -4,18 +4,18 @@
   </div>
   <div class="menu-div">
     <div class="menu">
-      <p><a routerLink="/login">Login</a></p>
+      <p *ngIf="!isAuth"><a routerLink="/login">Login</a></p>
       <p>
         <a routerLink="/cart-page" class="cart"
           >Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a
         >
       </p>
     </div>
-    <div class="profile-img mt-1">
-      <a routerLink="/dashboard">Aakash</a>
+    <div class="profile-img mt-1" *ngIf="isAuth">
+      <a routerLink="/dashboard">{{ user.name }}</a>
       <div class="profile-div">
         <p><a>Profile</a></p>
-        <p><a class="logout">Logout</a></p>
+        <p><a class="logout" (click)="logout()">Logout</a></p>
       </div>
     </div>
     <p class="d-lg-none toggle" (click)="toggle()">

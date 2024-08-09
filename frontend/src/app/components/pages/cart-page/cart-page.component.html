@@ -48,7 +48,9 @@
           Price: <b>{{ cart.totalPrice | currency : "INR" }}</b>
         </div>
         <div class="button mt-3">
-          <button class="btn w-100">Proceed To Checkout</button>
+          <button class="btn w-100" routerLink="/checkout-page">
+            Proceed To Checkout
+          </button>
         </div>
       </div>
     </div>

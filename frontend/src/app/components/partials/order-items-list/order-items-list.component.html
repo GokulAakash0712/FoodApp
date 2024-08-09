@@ -1,0 +1,12 @@
+<div class="order-items mt-2" *ngFor="let item of order.items">
+  <div class="image">
+    <img [src]="item.food.imageUrl" [alt]="item.food.name" />
+  </div>
+  <div class="item">{{ item.food.name }}</div>
+  <div class="price">{{ item.food.price | currency : "INR" }}</div>
+  <div class="quantity">{{ item.quantity }}</div>
+  <div class="total">{{ item.price | currency : "INR" }}</div>
+</div>
+<div class="total-price text-end mt-2">
+  <b>Total : {{ order.totalPrice | currency : "INR" }}</b>
+</div>

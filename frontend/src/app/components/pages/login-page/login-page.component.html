@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="form">
+    <h2 class="mb-3">Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="form-input mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" formControlName="email" />
+        <div class="error" *ngIf="fc['email'].errors && isSubmitted">
+          <div *ngIf="fc['email'].errors['required']">Email is required.</div>
+          <div *ngIf="fc['email'].errors['email']">Invalid Email.</div>
+        </div>
+      </div>
+      <div class="form-input mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+        />
+        <div class="error" *ngIf="fc['password'].errors && isSubmitted">
+          <div *ngIf="fc['password'].errors['required']">
+            Password is required.
+          </div>
+        </div>
+      </div>
+      <div class="button mt-5">
+        <button type="submit" class="btn w-100">Login</button>
+      </div>
+    </form>
+    <div class="new mt-3">
+      <p>
+        New User?
+        <span
+          ><a routerLink="/register" [queryParams]="{ returnUrl: returnUrl }"
+            >Register Here</a
+          ></span
+        >
+      </p>
+    </div>
+  </div>
+</div>

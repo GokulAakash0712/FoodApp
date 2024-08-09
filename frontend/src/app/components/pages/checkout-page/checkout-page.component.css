@@ -1,0 +1,18 @@
+.btn {
+  background-color: #ff2727;
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #ff2727;
+  border: 1px solid #ff2727;
+}
+
+.error {
+  color: red;
+}
+
+input:focus {
+  box-shadow: none;
+}

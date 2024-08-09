@@ -1,5 +1,5 @@
-<div class="filter mt-5" *ngIf="tags">
-  <div class="tags" *ngFor="let tag of tags">
+<div class="container mt-5">
+  <div class="buttons" *ngFor="let tag of tags">
     <button class="btn" routerLink="/tag/{{ tag.name }}">
       {{ tag.name }}&nbsp;({{ tag.count }})
     </button>
